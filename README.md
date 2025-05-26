@@ -28,30 +28,41 @@
 --- Steps
 
 ### 1. Clone the repo
+
 (https://github.com/zakmafia/city-lockers-project.git)
+
 cd city-lockers
 
 ### 2. Set up the backend
+
 cd backend
+
 npm install
 
 ### 3. Create a .env file in backend/
+
 DATABASE_URL="postgresql://username:password@localhost:5432/citylockers" (create postgresql database named citylockers)
 
 ### 4. Run Prisma Migrate in backend/
+
 npx prisma migrate dev --name init
+
 node index.js
 
 "Backend runs on http://localhost:4000"
 
 ### 5. Set up the frontend
+
 cd ../frontend
+
 npm install
 
 ### 6. Create a .env.local file in frontend/
+
 NEXT_PUBLIC_BACKEND_URL=http://localhost:4000
 
 ### 7. Start the frontend
+
 npm run dev
 
 "Frontend runs on http://localhost:3000"

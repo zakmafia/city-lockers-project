@@ -29,18 +29,22 @@
 ## 📁 Project Structure
 
 city-lockers/
+│
 ├── backend/
-│ ├── index.js
-│ ├── prisma/
-│ │ └── schema.prisma
-│ ├── controllers/
-│ └── routes/
+│   ├── index.js                  # Express app entry point
+│   ├── prisma/
+│   │   └── schema.prisma         # Prisma DB schema
+│   ├── controllers/              # Route handler logic
+│   └── routes/                   # API route definitions
+│
 ├── frontend/
-│ ├── app/
-│ ├── public/
-│ └── .env.local
-├── .gitignore
-├── README.md
+│   ├── app/                      # Next.js pages & components
+│   ├── public/                   # Static assets
+│   └── .env.local                # Frontend environment config
+│
+├── .gitignore                    # Git ignore rules
+├── README.md                     # Project documentation
+
 
 ### 1. Clone the repo
 git clone https://github.com/your-username/city-lockers.git

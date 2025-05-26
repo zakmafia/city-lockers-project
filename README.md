@@ -26,40 +26,6 @@
 | Database    | PostgreSQL                   |
 
 ---
-## 📁 Project Structure
-
-city-lockers/
-
-│
-
-├── backend/
-
-│   ├── index.js                  # Express app entry point
-
-│   ├── prisma/
-
-│   │   └── schema.prisma         # Prisma DB schema
-
-│   ├── controllers/              # Route handler logic
-
-│   └── routes/                   # API route definitions
-
-│
-├── frontend/
-
-│   ├── app/                      # Next.js pages & components
-
-│   ├── public/                   # Static assets
-
-│   └── .env.local                # Frontend environment config
-
-│
-
-├── .gitignore                    # Git ignore rules
-
-├── README.md                     # Project documentation
-
-
 ### 1. Clone the repo
 git clone https://github.com/your-username/city-lockers.git
 cd city-lockers

@@ -25,15 +25,24 @@ export default function BookPage() {
   const handleSubmit = async (e: any) => {
     e.preventDefault();
 
-    if (!userName.trim() || !unitId || !startDate || !endDate) {
+    const parsedUnitId = parseInt(unitId);
+
+    if (!userName.trim() || !unitId || isNaN(parsedUnitId) || !startDate || !endDate) {
       setError('All fields are required.');
       return;
     }
 
     try {
-      await axios.post(`${API}/book`, {
+      console.log({
         userName,
-        unitId: parseInt(unitId),
+        unitId: parsedUnitId,
+        startDate,
+        endDate,
+      });
+
+      await axios.post(`${API}/bookings`, {
+        userName,
+        unitId: parsedUnitId,
         startDate,
         endDate,
       });
@@ -45,6 +54,7 @@ export default function BookPage() {
         router.push(`/my-bookings?userName=${encodeURIComponent(userName)}`);
       }, 2000);
     } catch (err: any) {
+      console.error('Booking error:', err);
       setError(err.response?.data?.error || 'Booking failed.');
     }
   };

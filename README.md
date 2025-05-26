@@ -1,6 +1,6 @@
 # 📦 City Lockers – Storage Unit Booking System
 
-**City Lockers** is a full-stack booking system that allows users to view, filter, and reserve storage units while preventing booking conflicts. Admins can create, update, and manage storage units through a simple and intuitive interface.
+**City Lockers** is a full-stack booking system that allows users to view, filter, and reserve storage units while preventing booking conflicts. Users can create and manage storage units through a simple and intuitive interface.
 
 ---
 
@@ -10,7 +10,7 @@
 - 🗓 Book units for a custom date range
 - ❌ Prevents overlapping (double) bookings
 - 📋 View all bookings or search by user
-- ➕ Create, update, and delete storage units
+- ➕ Create storage units
 - 🧼 Clean, responsive UI built with Tailwind CSS
 - 🔒 RESTful API with validations and error handling
 
@@ -29,20 +29,34 @@
 ## 📁 Project Structure
 
 city-lockers/
+
 │
+
 ├── backend/
+
 │   ├── index.js                  # Express app entry point
+
 │   ├── prisma/
+
 │   │   └── schema.prisma         # Prisma DB schema
+
 │   ├── controllers/              # Route handler logic
+
 │   └── routes/                   # API route definitions
+
 │
 ├── frontend/
+
 │   ├── app/                      # Next.js pages & components
+
 │   ├── public/                   # Static assets
+
 │   └── .env.local                # Frontend environment config
+
 │
+
 ├── .gitignore                    # Git ignore rules
+
 ├── README.md                     # Project documentation
 
 

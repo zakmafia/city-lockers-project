@@ -28,7 +28,7 @@
 --- Steps
 
 ### 1. Clone the repo
-git clone https://github.com/your-username/city-lockers.git
+(https://github.com/zakmafia/city-lockers-project.git)
 cd city-lockers
 
 ### 2. Set up the backend

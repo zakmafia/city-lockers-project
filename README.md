@@ -78,9 +78,13 @@ npm run dev
 ---
 
 🌐 Accessing the App
+
 Home: / – View & filter units
+
 Book: /book – Select unit & date range
+
 My Bookings: /my-bookings?userName=John – View your bookings
+
 Units: /create-unit – Add new units
 
 ---

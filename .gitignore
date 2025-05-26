@@ -1,0 +1,44 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Node modules
+**/node_modules/
+
+# Dependency directories
+.pnpm
+.yarn
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage
+coverage/
+
+# dotenv environment files
+.env
+.env.*.local
+
+# Prisma generated files
+**/prisma/dev.db
+**/prisma/dev.db-journal
+
+# Build output
+.next/
+dist/
+out/
+
+# Vercel
+.vercel/
+
+# IDE/Editor
+.vscode/
+.idea/
+*.swp
+
+# Mac system files
+.DS_Store

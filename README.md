@@ -43,6 +43,8 @@ npm install
 
 DATABASE_URL="postgresql://username:password@localhost:5432/citylockers" (create postgresql database named citylockers)
 
+In order for it to work, don't forget to grant the database user full access to create and alter the database
+
 ### 4. Run Prisma Migrate in backend/
 
 npx prisma migrate dev --name init

@@ -26,7 +26,7 @@ export default function CreateUnitPage() {
         pricePerDay: parseFloat(pricePerDay),
       });
 
-      setMessage('✅ Unit created successfully!');
+      setMessage('✅ Unit created successfully! Go to home page to see your units!');
       setName('');
       setSize('');
       setLocation('');

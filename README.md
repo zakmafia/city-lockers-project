@@ -25,49 +25,66 @@
 | ORM         | Prisma                       |
 | Database    | PostgreSQL                   |
 
---- Steps
+---
+
+## Steps
 
 ### 1. Clone the repo
 
 (https://github.com/zakmafia/city-lockers-project.git)
 
-cd city-lockers
+-- cd city-lockers-project
 
 ### 2. Set up the backend
 
-cd backend
+-- cd backend
 
-npm install
+-- npm install
 
-### 3. Create a .env file in backend/
+### 3. Set up the PostgreSQL 
 
-DATABASE_URL="postgresql://username:password@localhost:5432/citylockers" (create postgresql database named citylockers)
+-- 1. Create the database
+CREATE DATABASE citylockers;
 
-In order for it to work, don't forget to grant the database user full access to create and alter the database
+-- 2. Create a user (role) with a password
+CREATE USER cityadmin WITH PASSWORD 'your_secure_password';
 
-### 4. Run Prisma Migrate in backend/
+-- 3. Grant all privileges on the database to the user
+GRANT ALL PRIVILEGES ON DATABASE citylockers TO cityadmin;
 
-npx prisma migrate dev --name init
+-- 4. Make the user a superuser
+ALTER USER cityadmin WITH SUPERUSER;
 
-node index.js
+✅ Replace 'your_secure_password' with a secure actual password
+🔒 You only need SUPERUSER if you're running migrations or creating extensions
 
-"Backend runs on http://localhost:4000"
+### 4. Create a .env file in backend/
 
-### 5. Set up the frontend
+-- DATABASE_URL="postgresql://username:password@localhost:5432/citylockers"
 
-cd ../frontend
+### 5. Run Prisma Migrate in backend/
 
-npm install
+-- npx prisma migrate dev --name init
 
-### 6. Create a .env.local file in frontend/
+-- node index.js
 
-NEXT_PUBLIC_BACKEND_URL=http://localhost:4000
+-- "Backend runs on http://localhost:4000"
 
-### 7. Start the frontend
+### 6. Set up the frontend
 
-npm run dev
+-- cd ../frontend
 
-"Frontend runs on http://localhost:3000"
+-- npm install
+
+### 7. Create a .env.local file in frontend/
+
+-- NEXT_PUBLIC_BACKEND_URL=http://localhost:4000
+
+### 8. Start the frontend
+
+-- npm run dev
+
+-- "Frontend runs on http://localhost:3000"
 
 ---
 

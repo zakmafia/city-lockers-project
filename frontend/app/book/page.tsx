@@ -52,7 +52,7 @@ export default function BookPage() {
 
       setTimeout(() => {
         router.push(`/my-bookings?userName=${encodeURIComponent(userName)}`);
-      }, 2000);
+      }, 2000); // I added this set of code to simulate any response times we may encounter
     } catch (err: any) {
       console.error('Booking error:', err);
       setError(err.response?.data?.error || 'Booking failed.');
